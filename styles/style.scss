@@ -1,0 +1,121 @@
+$DarkBackground: #406718;
+$MediumBackground: #690;
+$LightBackground: #3c0;
+$BaseTextColor: white;
+
+body {
+  background-color: black;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  .Title {
+    background-color: $DarkBackground;
+    color: $BaseTextColor;
+    text-align: center;
+    font: 2em verdana;
+  }
+  .nav {
+    background-color: $MediumBackground;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: $LightBackground;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding-left: 0;
+      li {
+        color: $BaseTextColor;
+        a {
+          &:visited {
+            color: $BaseTextColor;
+            font-size: 0.9em;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+          color: $BaseTextColor;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  .MainTop {
+    display: flex;
+    margin-top: 1em;
+    justify-content: space-evenly;
+    img {
+      width: 75%;
+    }
+    article {
+      width: 20%;
+      border-style: solid;
+      border-width: thin;
+      border-color: $LightBackground;
+      color: $BaseTextColor;
+      text-align: left;
+      padding: 0 1em;
+      font: verdana;
+    }
+  }
+
+  .articles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    article {
+      width: 20%;
+      border-style: solid;
+      border-color: $LightBackground;
+      border-width: thin;
+      .productHeader {
+        background-color: $DarkBackground;
+        font: 1.5em verdana;
+        color: #ccc;
+        text-align: center;
+        p {
+          margin: 0;
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .price {
+        background-color: $DarkBackground;
+        color: #ccc;
+        text-align: center;
+
+        p {
+          margin: 0;
+          padding: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: $MediumBackground;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: $LightBackground;
+  margin: 1em 0;
+}
+@import "./responsive1000";
+@import "./responsive800";
+@import "./responsive600";
+@import "./responsive500";

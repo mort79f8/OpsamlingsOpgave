@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px) {
+  main {
+    .MainTop {
+      flex-direction: column-reverse;
+
+      img {
+        margin: 1em auto;
+      }
+      //   hjælp fra gøg og gokke
+      article {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

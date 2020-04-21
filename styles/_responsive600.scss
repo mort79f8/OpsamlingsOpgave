@@ -1,0 +1,15 @@
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  main {
+    .articles {
+      flex-wrap: wrap;
+      article {
+        margin: 1em 0;
+        width: 48%;
+      }
+    }
+  }
+}

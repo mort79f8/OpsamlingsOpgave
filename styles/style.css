@@ -1,0 +1,214 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .Title {
+  background-color: #406718;
+  color: white;
+  text-align: center;
+  font: 2em verdana;
+}
+
+header .nav {
+  background-color: #690;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #3c0;
+}
+
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  padding-left: 0;
+}
+
+header .nav ul li {
+  color: white;
+}
+
+header .nav ul li a {
+  color: white;
+}
+
+header .nav ul li a:visited {
+  color: white;
+  font-size: 0.9em;
+}
+
+header .nav ul li a:hover {
+  text-decoration: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .MainTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .MainTop img {
+  width: 75%;
+}
+
+main .MainTop article {
+  width: 20%;
+  border-style: solid;
+  border-width: thin;
+  border-color: #3c0;
+  color: white;
+  text-align: left;
+  padding: 0 1em;
+  font: verdana;
+}
+
+main .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2em;
+}
+
+main .articles article {
+  width: 20%;
+  border-style: solid;
+  border-color: #3c0;
+  border-width: thin;
+}
+
+main .articles article .productHeader {
+  background-color: #406718;
+  font: 1.5em verdana;
+  color: #ccc;
+  text-align: center;
+}
+
+main .articles article .productHeader p {
+  margin: 0;
+}
+
+main .articles article img {
+  width: 100%;
+  display: block;
+}
+
+main .articles article .price {
+  background-color: #406718;
+  color: #ccc;
+  text-align: center;
+}
+
+main .articles article .price p {
+  margin: 0;
+  padding: 0.5em;
+}
+
+footer {
+  text-align: center;
+  background-color: #690;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #3c0;
+  margin: 1em 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    width: 90%;
+  }
+  header .nav ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header .nav ul li {
+    text-align: center;
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main .MainTop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main .MainTop img {
+    margin: 1em auto;
+  }
+  main .MainTop article {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
+  main .articles {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .articles article {
+    margin: 1em 0;
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .nav ul li {
+    margin: 0.4em auto;
+  }
+  main .articles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .articles article {
+    width: 96%;
+    margin: 1em auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
