@@ -1,47 +1,40 @@
-$DarkBackground: #406718;
-$MediumBackground: #690;
-$LightBackground: #3c0;
-$BaseTextColor: white;
-
-body {
-  background-color: black;
-}
+@import "colors";
 
 .wrapper {
-  width: 80%;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer .";
 }
 
 header {
-  display: flex;
-  flex-direction: column;
+  grid-area: header;
+  display: grid;
+  grid-template-rows: auto 1fr;
   .Title {
-    background-color: $DarkBackground;
-    color: $BaseTextColor;
     text-align: center;
-    font: 2em verdana;
+    color: $BaseTextColor;
+    background-color: $DarkBackground;
   }
-  .nav {
-    background-color: $MediumBackground;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: $LightBackground;
+  nav {
     ul {
       display: flex;
-      justify-content: space-evenly;
-      list-style: none;
-      padding-left: 0;
+      justify-content: space-between;
+      background-color: $MediumBackground;
+      border-top-style: solid;
+      border-bottom-style: solid;
+      border-color: $LightBackground;
       li {
-        color: $BaseTextColor;
+        list-style: none;
         a {
-          &:visited {
-            color: $BaseTextColor;
-            font-size: 0.9em;
-          }
-          &:hover {
-            text-decoration: none;
-          }
+          text-decoration: none;
           color: $BaseTextColor;
+          display: block;
+          padding: 14px 16px;
+          background-color: $MediumBackground;
         }
       }
     }
@@ -49,73 +42,20 @@ header {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto 1fr;
   .MainTop {
-    display: flex;
-    margin-top: 1em;
-    justify-content: space-evenly;
-    img {
-      width: 75%;
-    }
-    article {
-      width: 20%;
-      border-style: solid;
-      border-width: thin;
-      border-color: $LightBackground;
-      color: $BaseTextColor;
-      text-align: left;
-      padding: 0 1em;
-      font: verdana;
-    }
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
-
   .articles {
     display: flex;
     justify-content: space-around;
-    margin-top: 2em;
-    article {
-      width: 20%;
-      border-style: solid;
-      border-color: $LightBackground;
-      border-width: thin;
-      .productHeader {
-        background-color: $DarkBackground;
-        font: 1.5em verdana;
-        color: #ccc;
-        text-align: center;
-        p {
-          margin: 0;
-        }
-      }
-      img {
-        width: 100%;
-        display: block;
-      }
-      .price {
-        background-color: $DarkBackground;
-        color: #ccc;
-        text-align: center;
-
-        p {
-          margin: 0;
-          padding: 0.5em;
-        }
-      }
-    }
   }
 }
 
 footer {
+  grid-area: footer;
   text-align: center;
-  background-color: $MediumBackground;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-color: $LightBackground;
-  margin: 1em 0;
 }
-@import "./responsive1000";
-@import "./responsive800";
-@import "./responsive600";
-@import "./responsive500";
