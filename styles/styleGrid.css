@@ -179,4 +179,31 @@ footer {
     grid-area: footer;
   }
 }
+
+@media screen and (max-width: 800px) {
+  main .MainTop {
+    margin: 0 auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+    row-gap: 1em;
+        grid-template-areas: "article" "img";
+  }
+  main .MainTop img {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: img;
+  }
+  main .MainTop article {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: article;
+  }
+  main .articles {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
 /*# sourceMappingURL=styleGrid.css.map */

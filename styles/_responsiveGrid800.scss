@@ -1,0 +1,25 @@
+@media screen and (max-width: 800px) {
+  main {
+    .MainTop {
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      row-gap: 1em;
+      grid-template-areas:
+        "article"
+        "img";
+
+      img {
+        grid-area: img;
+      }
+
+      article {
+        grid-area: article;
+      }
+    }
+
+    .articles {
+      justify-content: space-evenly;
+    }
+  }
+}
