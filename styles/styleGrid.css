@@ -206,4 +206,19 @@ footer {
             justify-content: space-evenly;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  main .articles {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .articles article {
+    margin: 1em 0;
+    width: 48%;
+  }
+}
 /*# sourceMappingURL=styleGrid.css.map */
