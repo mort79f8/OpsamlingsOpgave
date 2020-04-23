@@ -1,0 +1,21 @@
+@media screen and (max-width: 500px) {
+  header {
+    .nav {
+      ul {
+        flex-direction: column;
+        li {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  main {
+    .articles {
+      flex-direction: column;
+      article {
+        width: 96%;
+        margin: 1em auto;
+      }
+    }
+  }
+}

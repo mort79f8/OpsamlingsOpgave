@@ -35,13 +35,18 @@ header {
       padding: 0;
       li {
         list-style: none;
+        color: $BaseTextColor;
         a {
-          text-decoration: none;
-          color: $BaseTextColor;
           display: block;
-          padding: 14px 16px;
-          background-color: $MediumBackground;
-          font-size: 0.9em;
+          padding: 10px;
+          &:visited {
+            color: $BaseTextColor;
+            font-size: 0.9em;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+          color: $BaseTextColor;
         }
       }
     }
@@ -111,3 +116,4 @@ footer {
 @import "responsiveGrid1000";
 @import "responsiveGrid800";
 @import "responsiveGrid600";
+@import "responsiveGrid500";
