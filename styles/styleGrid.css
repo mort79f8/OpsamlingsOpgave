@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -35,6 +39,8 @@ header nav ul {
   border-top-style: solid;
   border-bottom-style: solid;
   border-color: #3c0;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li {
@@ -60,10 +66,19 @@ main {
 }
 
 main .MainTop {
+  margin: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
+}
+
+main .MainTop article {
+  border: solid #3c0;
+  font: verdana;
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 main .articles {
@@ -72,6 +87,16 @@ main .articles {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+main .articles article {
+  border: solid #3c0;
+}
+
+main .articles article .productHeader {
+  color: #ccc;
+  font: 1.5em verdana;
+  text-align: center;
 }
 
 footer {

@@ -1,5 +1,8 @@
 @import "colors";
 
+body {
+  background: black;
+}
 .wrapper {
   display: grid;
   grid-template-columns: 10% 1fr 10%;
@@ -27,6 +30,8 @@ header {
       border-top-style: solid;
       border-bottom-style: solid;
       border-color: $LightBackground;
+      margin: 0;
+      padding: 0;
       li {
         list-style: none;
         a {
@@ -46,12 +51,28 @@ main {
   display: grid;
   grid-template-rows: auto 1fr;
   .MainTop {
+    margin: 1em;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    article {
+      border: solid $LightBackground;
+      font: verdana;
+      color: $BaseTextColor;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
   .articles {
     display: flex;
     justify-content: space-around;
+    article {
+      .productHeader {
+        color: #ccc;
+        font: 1.5em verdana;
+        text-align: center;
+      }
+      border: solid $LightBackground;
+    }
   }
 }
 
