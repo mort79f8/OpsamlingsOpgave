@@ -6,7 +6,7 @@ body {
 .wrapper {
   display: grid;
   grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     ". header ."
     ". main ."
@@ -67,9 +67,28 @@ main {
     justify-content: space-around;
     article {
       .productHeader {
+        background-color: $DarkBackground;
         color: #ccc;
         font: 1.5em verdana;
         text-align: center;
+        p {
+          margin: 0;
+          padding: 0.3em;
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .price {
+        background-color: $DarkBackground;
+        color: #ccc;
+        font: 1em verdana;
+        text-align: center;
+        p {
+          margin: 0;
+          padding: 0.5em;
+        }
       }
       border: solid $LightBackground;
     }
@@ -78,5 +97,10 @@ main {
 
 footer {
   grid-area: footer;
+  background-color: $MediumBackground;
   text-align: center;
+  color: black;
+  margin-top: 1em;
+  border-top: solid $LightBackground;
+  border-bottom: solid $LightBackground;
 }
