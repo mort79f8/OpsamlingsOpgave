@@ -53,6 +53,7 @@ header nav ul li a {
   display: block;
   padding: 14px 16px;
   background-color: #690;
+  font-size: 0.9em;
 }
 
 main {
