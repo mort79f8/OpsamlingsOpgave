@@ -33,9 +33,9 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #690;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -80,10 +80,14 @@ main {
 main .MainTop {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
   -webkit-column-gap: 1em;
           column-gap: 1em;
+}
+
+main .MainTop img {
+  width: 100%;
 }
 
 main .MainTop article {
@@ -103,6 +107,7 @@ main .articles {
 }
 
 main .articles article {
+  width: 23%;
   border: solid #3c0;
 }
 
@@ -211,6 +216,9 @@ footer {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  main .articles article {
+    width: 23%;
   }
 }
 

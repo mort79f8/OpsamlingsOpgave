@@ -19,6 +19,9 @@
     }
 
     .articles {
+      article {
+        width: 23%;
+      }
       justify-content: space-evenly;
     }
   }

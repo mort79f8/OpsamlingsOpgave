@@ -26,7 +26,7 @@ header {
   nav {
     ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       background-color: $MediumBackground;
       border-top-style: solid;
       border-bottom-style: solid;
@@ -61,8 +61,11 @@ main {
   column-gap: 1em;
   .MainTop {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 2fr 1fr;
     column-gap: 1em;
+    img {
+      width: 100%;
+    }
     article {
       border: solid $LightBackground;
       font: verdana;
@@ -75,6 +78,7 @@ main {
     display: flex;
     justify-content: space-around;
     article {
+      width: 23%;
       .productHeader {
         background-color: $DarkBackground;
         color: #ccc;
@@ -113,7 +117,5 @@ footer {
   border-bottom: solid $LightBackground;
 }
 
-@import "responsiveGrid1000";
-@import "responsiveGrid800";
-@import "responsiveGrid600";
-@import "responsiveGrid500";
+@import "responsiveGrid1000", "responsiveGrid800", "responsiveGrid600",
+  "responsiveGrid500";
